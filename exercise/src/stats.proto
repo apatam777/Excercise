@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package service;
+
+import "google/protobuf/wrappers.proto";
+
+service statistics {
+    
+    rpc sent_Information (COVID_info)
+            returns (success);  
+
+ 
+}
+
+message COVID_info{
+
+    string regionName = 1;
+    string date = 2;
+    int32 num_deaths = 3;
+    int32 num_Cases = 4;
+    int32 num_Recoveries = 5;
+    int32 num_Tests = 6;
+}
+
+message success{
+
+    string confirmation = 1;    
+}
